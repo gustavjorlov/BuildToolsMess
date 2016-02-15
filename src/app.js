@@ -4,9 +4,9 @@ var utils = require("./utils/utils.js");
 
 	utils.complicatedStuff();
 
-	var result = [1, 2, 3, 6, 2, 3, 4, 5, 1].sort((a, b) => {
+	var result = [1, 2, 3, 6, 2, 3, 422, 5, 1].sort((a, b) => {
 		return (a > b) ? 1 : -1;
-	}).join("-f-");
+	}).join("-");
 
 	document.getElementById("main").innerHTML = result;
 
