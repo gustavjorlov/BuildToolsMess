@@ -39,15 +39,15 @@ gulp.task('lint', function(){
 
 gulp.task('copy', function () {
 	return gulp
-		.src('./src/index.html')
+		.src(['./src/**/*.html', './src/**/*.css'])
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task("css", function(){
+/*gulp.task("css", function(){
 	return gulp
 		.src(paths.css)
 		.pipe(gulp.dest('dist'));
-});
+});*/
 
 gulp.task("clean", function(){
 	del(["dist"]);
@@ -56,10 +56,10 @@ gulp.task("clean", function(){
 gulp.task('serve', serve('dist'));
 
 gulp.task('watch', function() {
-	gulp.watch(paths.scripts, ['js']);
+	gulp.watch([paths.scripts, "src/**/*"], ['js', 'copy']);
 });
 
 //Collections
-gulp.task("default", ['lint', 'js', 'css', 'copy', 'serve']);
+gulp.task("default", ['lint', 'js', 'copy', 'serve']);
 gulp.task("rebuild", ['clean', 'default']);
 gulp.task("dev", ['watch', 'serve']);
