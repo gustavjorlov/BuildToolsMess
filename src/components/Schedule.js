@@ -11,6 +11,7 @@ export default class Schedule extends React.Component{
 						return <ConferenceItem item={presentation} />
 					})}
 				</div>
+				<br/><br/><br/>
 			</div>
 		);
 	}
