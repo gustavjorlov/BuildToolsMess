@@ -1,13 +1,10 @@
-var utils = require("./utils/utils.js");
+import React from 'react';
+import ReactDOM from 'react-dom';
+import FishList from './components/FishList.js';
 
-(function (){
+var fish = ["Gädda", "Ål", "Mört"];
 
-	utils.complicatedStuff();
-
-	var result = [1, 2, 3, 6, 2, 3, 422, 5, 1].sort((a, b) => {
-		return (a > b) ? 1 : -1;
-	}).join("-");
-
-	document.getElementById("main").innerHTML = result;
-
-})();
+ReactDOM.render(
+  <FishList fish={fish} />,
+  document.getElementById('main')
+);
