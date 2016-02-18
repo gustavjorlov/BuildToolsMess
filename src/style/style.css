@@ -52,7 +52,33 @@ p{
     width: 20px;
     left: 348px;
     position: relative;
-    top: 45px;
+    top: -15px;
+    overflow: hidden;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.ball img {
+    position: relative;
+    top: -30px;
+    width: 80px;
+    height: 80px;
+    left: -30px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.person:hover .ball {
+    width: 80px;
+    height: 80px;
+    top: -45px;
+    left: 318px;
+}
+.person:hover img {
+    top: 0px;
+    left: 0px;
 }
 .schedule, .info{
 	margin: 0px auto;
@@ -76,6 +102,7 @@ p{
     padding-bottom: 25px;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #ddd;
+    height: 100px;
 }
 h3.title {
     position: relative;
@@ -85,11 +112,13 @@ p.duration {
     font-style: italic;
     position: relative;
     right: -90px;
-    top: 24px;
+    top: 62px;
     display: inline;
 }
 p.topic {
     font-family: georgia;
+    position: relative;
+    top: 20px;
 }
 .person:nth-child(odd){
 	background: #eee;
@@ -104,6 +133,8 @@ p.topic {
 	font-style: initial;
 	font-family: arial;
 	font-variant: small-caps;
+	position: relative;
+    top: 0px;
 }
 .presentation h3{
 	font-size: 28px;

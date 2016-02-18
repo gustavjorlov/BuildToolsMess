@@ -28,7 +28,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 30,
 		"time": "14:00",
-		"presentation": true
+		"presentation": true,
+		"image": "secret.png"
 	},
 	{
 		"title": "Olof",
@@ -36,7 +37,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 45,
 		"time": "14:30",
-		"presentation": true
+		"presentation": true,
+		"image": "olofgunnarsson-mini.png"
 	},
 	{
 		"title": "Pierre",
@@ -44,7 +46,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 45,
 		"time": "15:15",
-		"presentation": true
+		"presentation": true,
+		"image": "secret.png"
 	},
 	{
 		"title": "Pierre",
@@ -52,7 +55,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 15,
 		"time": "16:00",
-		"presentation": true
+		"presentation": true,
+		"image": "secret.png"
 	},
 	{
 		"title": "Fika",
@@ -68,7 +72,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 40,
 		"time": "16:30",
-		"presentation": true
+		"presentation": true,
+		"image": "joakimkemeny-mini.png"
 	},
 	{
 		"title": "Mikael W",
@@ -76,7 +81,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 25,
 		"time": "17:10",
-		"presentation": true
+		"presentation": true,
+		"image": "secret.png"
 	},
 	{
 		"title": "Tobias",
@@ -84,7 +90,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 15,
 		"time": "17:35",
-		"presentation": true
+		"presentation": true,
+		"image": "tobiaslans-mini.png"
 	},
 	{
 		"title": "Johan H",
@@ -92,7 +99,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 60,
 		"time": "17:50",
-		"presentation": true
+		"presentation": true,
+		"image": "secret.png"
 	},
 	{
 		"title": "Oscar",
@@ -100,7 +108,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 15,
 		"time": "18:50",
-		"presentation": true
+		"presentation": true,
+		"image": "secret.png"
 	},
 	{
 		"title": "Patrik",
@@ -108,7 +117,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 15,
 		"time": "19:05",
-		"presentation": true
+		"presentation": true,
+		"image": "patriknilsson-mini.png"
 	},
 	{
 		"title": "Gustav",
@@ -116,7 +126,8 @@ var fridaySchedule = [
 		"description": "",
 		"duration": 30,
 		"time": "19:20",
-		"presentation": true
+		"presentation": true,
+		"image": "gustavjorlov-mini.png"
 	},
 	{
 		"title": "Middag",
@@ -160,7 +171,7 @@ var sundaySchedule = [
 		"presentation": false
 	},
 	{
-		"title": "Busstransfer Åre Holiday Club - Önstersund",
+		"title": "Buss till Östersund",
 		"topic": "Sova den sista blunden",
 		"time": "9:00",
 		"presentation": false

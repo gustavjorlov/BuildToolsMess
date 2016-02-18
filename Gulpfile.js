@@ -39,7 +39,17 @@ gulp.task('lint', function(){
 
 gulp.task('copy', function () {
 	return gulp
-		.src(['./src/**/*.html', './src/**/*.css', './src/**/*.png', './src/**/*.svg', './src/**/*.jpg'])
+		.src(['./src/**/*.html', 
+			'./src/**/*.css', 
+			'./src/**/*.png', 
+			'./src/**/*.svg', 
+			'./src/**/*.jpg',
+			'./src/**/*.eot',
+			'./src/**/*.woff',
+			'./src/**/*.woff2',
+			'./src/**/*.ttf',
+			'./src/**/*.otf'
+		])
 		.pipe(gulp.dest('dist'));
 });
 
@@ -56,10 +66,10 @@ gulp.task("clean", function(){
 gulp.task('serve', serve('dist'));
 
 gulp.task('watch', function() {
-	gulp.watch([paths.scripts, "src/**/*"], ['js', 'copy']);
+	gulp.watch([paths.scripts, "src/**/*"], ['lint', 'js', 'copy']);
 });
 
 //Collections
 gulp.task("default", ['lint', 'js', 'copy', 'serve']);
 gulp.task("rebuild", ['clean', 'default']);
-gulp.task("dev", ['watch', 'serve']);
+gulp.task("dev", ['clean', 'lint', 'js', 'copy', 'watch', 'serve']);
