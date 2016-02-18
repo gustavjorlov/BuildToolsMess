@@ -33,13 +33,13 @@ gulp.task("js", function () {
 gulp.task('lint', function(){
 	return gulp.src(['**/*.js','!node_modules/**','!dist/**'])
         .pipe(eslint()) // eslint() attaches the lint output to the "eslint" property of the file object so it can be used by other modules.
-        .pipe(eslint.format()) // eslint.format() outputs the lint results to the console. Alternatively use eslint.formatEach() (see Docs).
-        .pipe(eslint.failAfterError()); // To have the process exit with an error code (1) on lint error, return the stream and pipe to failAfterError last.
+        .pipe(eslint.format()); // eslint.format() outputs the lint results to the console. Alternatively use eslint.formatEach() (see Docs).
+        //.pipe(eslint.failAfterError()); // To have the process exit with an error code (1) on lint error, return the stream and pipe to failAfterError last.
 });
 
 gulp.task('copy', function () {
 	return gulp
-		.src(['./src/**/*.html', './src/**/*.css'])
+		.src(['./src/**/*.html', './src/**/*.css', './src/**/*.png', './src/**/*.svg', './src/**/*.jpg'])
 		.pipe(gulp.dest('dist'));
 });
 

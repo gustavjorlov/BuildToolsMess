@@ -1,17 +1,21 @@
 import React from 'react';
-import ConferenceItem from './ConferenceItem.js';
+import Day from './Day.js';
 
 export default class Schedule extends React.Component{
-	render(){
+
+	renderDay(day){
+		console.log("day", day);
 		return (
 			<div className="scheduleview">
-				<h2>Schema</h2>
-				<div className="schedule">
-					{this.props.presentations.map(presentation => {
-						return <ConferenceItem item={presentation} />
-					})}
-				</div>
-				<br/><br/><br/>
+				<Day name={day.day} schedule={day.schedule} />
+			</div>
+		);
+	}
+
+	render(){
+		return (
+			<div>
+				{this.props.schedule.map(this.renderDay)}
 			</div>
 		);
 	}

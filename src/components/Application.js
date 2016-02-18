@@ -11,7 +11,7 @@ export default class Application extends React.Component{
 			<div className="application">
 				<Header />
 				<GeneralInformation />
-				<Schedule presentations={this.props.presentations} />
+				<Schedule schedule={this.props.schedule} />
 				<Footer />
 			</div>
 		);

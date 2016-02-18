@@ -3,76 +3,191 @@ import ReactDOM from 'react-dom';
 
 import Application from './components/Application.js';
 
-var presentations = [
+var fridaySchedule = [
 	{
-		"person": "Sture",
+		"title": "Avresa från Landvetter",
+		"topic": "Mellanlanda i Bromma, slutmål Östersund",
+		"time": "7:00",
+		"presentation": false
+	},
+	{
+		"title": "Landar i Östersund",
+		"topic": "...och påbörja transfer till Åre",
+		"time": "9:20",
+		"presentation": false
+	},
+	{
+		"title": "Lunch på hotellet",
+		"topic": "Ät ordentligt, en lång dag väntar",
+		"time": "~12:30",
+		"presentation": false
+	},
+	{
+		"title": "Sture",
 		"topic": "CAN bus reverse engineering",
 		"description": "",
-		"duration": 30
+		"duration": 30,
+		"time": "14:00",
+		"presentation": true
 	},
 	{
-		"person": "Olof",
+		"title": "Olof",
 		"topic": "Automatgenerera dina tester i Spring",
 		"description": "",
-		"duration": 45
+		"duration": 45,
+		"time": "14:30",
+		"presentation": true
 	},
 	{
-		"person": "Pierre",
+		"title": "Pierre",
 		"topic": "Bygga en app med Apple Watch Kit",
 		"description": "",
-		"duration": 45
+		"duration": 45,
+		"time": "15:15",
+		"presentation": true
 	},
 	{
-		"person": "Pierre",
+		"title": "Pierre",
 		"topic": "Foto -> CSS",
 		"description": "",
-		"duration": 15
+		"duration": 15,
+		"time": "16:00",
+		"presentation": true
 	},
 	{
-		"person": "Joakim K",
+		"title": "Fika",
+		"topic": "Kaffe och bulle",
+		"description": "",
+		"duration": 15,
+		"time": "16:15",
+		"presentation": true
+	},
+	{
+		"title": "Joakim K",
 		"topic": "Is JavaScript getting any better?",
 		"description": "",
-		"duration": 40
+		"duration": 40,
+		"time": "16:30",
+		"presentation": true
 	},
 	{
-		"person": "Mikael W",
+		"title": "Mikael W",
 		"topic": "Input, output, kaput – Java Deserlization och Du",
 		"description": "",
-		"duration": 25
+		"duration": 25,
+		"time": "17:10",
+		"presentation": true
 	},
 	{
-		"person": "Tobias",
+		"title": "Tobias",
 		"topic": "Jag kan inte mina lösenord¤!?#",
 		"description": "",
-		"duration": 15
+		"duration": 15,
+		"time": "17:35",
+		"presentation": true
 	},
 	{
-		"person": "Johan H",
+		"title": "Johan H",
 		"topic": "KITS?",
 		"description": "",
-		"duration": 60
+		"duration": 60,
+		"time": "17:50",
+		"presentation": true
 	},
 	{
-		"person": "Oscar",
+		"title": "Oscar",
 		"topic": "Erfarenheter från ett småskaligt angular-projekt med Firebase som backend",
 		"description": "",
-		"duration": 15
+		"duration": 15,
+		"time": "18:50",
+		"presentation": true
 	},
 	{
-		"person": "Patrik",
+		"title": "Patrik",
 		"topic": "Web workers",
 		"description": "",
-		"duration": 15
+		"duration": 15,
+		"time": "19:05",
+		"presentation": true
 	},
 	{
-		"person": "Gustav",
+		"title": "Gustav",
 		"topic": "The need for a JavaScript build tool",
 		"description": "",
-		"duration": 30
+		"duration": 30,
+		"time": "19:20",
+		"presentation": true
+	},
+	{
+		"title": "Middag",
+		"topic": "På hotellet",
+		"time": "20:00",
+		"presentation": false
+	}
+];
+
+var saturdaySchedule = [
+	{
+		"title": "Vakna",
+		"topic": "Pigg som en lärka",
+		"time": "7:00",
+		"presentation": false
+	},
+	{
+		"title": "Hopp och lek",
+		"topic": "Åka skidor, köra skoter eller surfa internet",
+		"time": "9:00",
+		"presentation": false
+	},
+	{
+		"title": "After Ski / Shop och stek",
+		"time": "17:30",
+		"presentation": false
+	},
+	{
+		"title": "Middag",
+		"topic": "Vinbaren mitt i Åre",
+		"time": "21:00",
+		"presentation": false
+	}
+];
+
+var sundaySchedule = [
+	{
+		"title": "Vakna",
+		"topic": "Piggare än en lärka",
+		"time": "7:00",
+		"presentation": false
+	},
+	{
+		"title": "Busstransfer Åre Holiday Club - Önstersund",
+		"topic": "Sova den sista blunden",
+		"time": "9:00",
+		"presentation": false
+	},
+	{
+		"title": "Åka hem",
+		"time": "11:00",
+		"presentation": false
+	}
+];
+
+var schedule = [
+	{
+		"day": "Fredag",
+		"schedule": fridaySchedule
+	},
+	{
+		"day": "Lördag",
+		"schedule": saturdaySchedule
+	},
+	{
+		"day": "Söndag",
+		"schedule": sundaySchedule
 	}
 ];
 
 ReactDOM.render(
-	<Application presentations={presentations} />,
+	<Application schedule={schedule} />,
 	document.getElementById('main')
 );
