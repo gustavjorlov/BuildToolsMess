@@ -17,7 +17,7 @@ var paths = {
 	"css": "src/**/*.css"
 };
 
-gulp.task("js", function () {
+gulp.task("js", function (){
 	var b = browserify({
 		entries: './src/app',
 		debug: true
@@ -38,18 +38,9 @@ gulp.task('lint', function(){
 });
 
 gulp.task('copy', function () {
+	var extensions = ['html', 'css', 'png', 'svg', 'jpg', 'eot', 'woff', 'woff2', 'ttf', 'otf'];
 	return gulp
-		.src(['./src/**/*.html', 
-			'./src/**/*.css', 
-			'./src/**/*.png', 
-			'./src/**/*.svg', 
-			'./src/**/*.jpg',
-			'./src/**/*.eot',
-			'./src/**/*.woff',
-			'./src/**/*.woff2',
-			'./src/**/*.ttf',
-			'./src/**/*.otf'
-		])
+		.src(extensions.map(function(ext){ return './src/**/*.'+ext; }))
 		.pipe(gulp.dest('dist'));
 });
 
