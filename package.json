@@ -26,7 +26,7 @@
     "build:prod": "time(npm run compile:prod && npm run copy)",
     "build:clean": "npm run clean && npm run build:dev",
     "dev": "npm run browsersync & npm run watch:js",
-    "deploy": "npm run clean && npm run build:prod"
+    "deploy": "npm run clean && npm run build:prod && npm version patch && git push"
   },
   "keywords": [],
   "author": "Gustav Jorlöv",
