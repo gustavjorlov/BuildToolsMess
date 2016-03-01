@@ -16,7 +16,6 @@
     "copy": "npm run copy:images && npm run copy:style && npm run copy:html",
     "watch:js": "watch 'npm run build:dev' src",
     "browsersync": "browser-sync start --files dist_npm/bundle.js --server dist_npm",
-    "push": "",
     "build:dev": "time(npm run compile:dev && npm run copy)",
     "build:prod": "time(npm run compile:prod && npm run copy)",
     "build:clean": "npm run clean && npm run build:dev",
