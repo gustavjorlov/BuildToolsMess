@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rimraf dist_npm/*",
     "lint": "eslint src/** --quiet",
-    "precompile": "npm run lint",
-    "compile": "",
+    "precompile:prod": "npm run lint",
+    "precompile:dev": "npm run lint",
     "compile:prod": "browserify ./src/app -t babelify | uglifyjs -mc > dist_npm/bundle.js",
     "compile:dev": "browserify ./src/app --debug -t babelify -o dist_npm/bundle.js",
     "copy:images": "cp -R src/images dist_npm/",
