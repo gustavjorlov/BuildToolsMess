@@ -9,7 +9,7 @@ export default class ConferenceItem extends React.Component{
 				<h3 className="title">{this.props.item.title}</h3>
 				<p className="topic">{this.props.item.topic}</p>
 				<div className="ball">
-					<img src={"images/" + this.props.item.image}/>
+					{this.props.item.image ? <img src={"images/" + this.props.item.image}/> : ""}
 				</div>
 			</div>);
 	}

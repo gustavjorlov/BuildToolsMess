@@ -9,7 +9,7 @@ export default class Day extends React.Component{
 				<h2>{this.props.name}</h2>
 				<div className="schedule">
 					{this.props.schedule.map(presentation => {
-						return <ConferenceItem item={presentation} />;
+						return <ConferenceItem key={presentation.id} item={presentation} />;
 					})}
 				</div>
 				<br/><br/><br/>
