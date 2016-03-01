@@ -1,29 +1,24 @@
 {
   "name": "KitsCon16",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
     "clean": "rimraf dist_npm/*",
     "lint": "eslint src/** --quiet",
-
     "precompile:prod": "npm run lint",
     "precompile:dev": "npm run lint",
     "compile:prod": "browserify ./src/app -t babelify | uglifyjs -mc > dist_npm/bundle.js",
     "compile:dev": "browserify ./src/app --debug -t babelify -o dist_npm/bundle.js",
-    
     "copy:images": "cp -R src/images dist_npm/",
     "copy:style": "cp -R src/style dist_npm/",
     "copy:html": "cp src/index.html dist_npm/",
     "copy": "npm run copy:images && npm run copy:style && npm run copy:html",
-
     "watch:js": "watch 'npm run compile:dev' src",
     "browsersync": "browser-sync start --files dist_npm/bundle.js --server dist_npm",
-
     "build:dev": "time(npm run compile:dev && npm run copy)",
     "build:prod": "time(npm run compile:prod && npm run copy)",
     "build:clean": "npm run clean && npm run build:dev",
-
     "dev": "npm run browsersync & npm run watch:js",
     "deploy": "npm run clean && npm run build:prod && npm version patch && git push"
   },
