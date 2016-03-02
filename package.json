@@ -2,8 +2,9 @@
   "name": "KitsCon16",
   "version": "1.0.4",
   "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "clean": "rimraf dist_npm/*",
     "lint": "eslint src/** --quiet",
     "precompile:prod": "npm run lint",
@@ -20,7 +21,13 @@
     "build:prod": "time(npm run compile:prod && npm run copy)",
     "build:clean": "npm run clean && npm run build:dev",
     "dev": "npm run browsersync & npm run watch:js",
-    "deploy": "npm run clean && npm run build:prod && npm version patch && git push"
+    "deploy": "npm run clean && npm run build:prod",
+    "deploy:patch": "npm run deploy && npm version patch && git push",
+    "deploy:minor": "npm run deploy && npm version minor && git push"
+  },
+  "engines": {
+      "node": "~4.2.1",
+      "npm": "~3.7.0"
   },
   "keywords": [],
   "author": "Gustav Jorlöv",
