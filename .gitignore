@@ -1,3 +1,4 @@
 node_modules/
 dist/
 dist_npm/
+npm-debug.log
