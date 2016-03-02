@@ -26,13 +26,14 @@
     "deploy:minor": "npm run deploy && npm version minor && git push"
   },
   "engines": {
-      "node": "~4.2.1",
-      "npm": "~3.7.0"
+    "node": "~4.2.1",
+    "npm": "~3.7.0"
   },
   "keywords": [],
   "author": "Gustav Jorlöv",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.4",
     "gulp": "3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-serve": "^1.2.0",
