@@ -200,10 +200,17 @@ var saturdaySchedule = [
 		"presentation": false
 	},
 	{
-		"id": "21",
+		"id": "21.1",
 		"title": "After Ski",
 		"topic": "Samling i hotellets lobby",
 		"time": "17:30",
+		"presentation": false
+	},
+	{
+		"id": "21.2",
+		"title": "Badet stänger",
+		"topic": "  ",
+		"time": "20:00",
 		"presentation": false
 	},
 	{
