@@ -5,7 +5,14 @@ import Application from './components/Application.js';
 
 var fridaySchedule = [
 	{
-		"id": "1",
+		"id": "1.1",
+		"title": "Vi ses på Landvetter",
+		"topic": "Absolut senast kl 6",
+		"time": "5:45",
+		"presentation": false
+	},
+	{
+		"id": "1.2",
 		"title": "Flyget lyfter",
 		"topic": "Landvetter - Bromma - Östersund",
 		"time": "7:00",
@@ -174,14 +181,21 @@ var saturdaySchedule = [
 	{
 		"id": "19",
 		"title": "Hopp och lek",
-		"topic": "Åka skidor, bada bastu eller surfa internet",
+		"topic": "Åka skidor eller surfa internet",
 		"time": "9:00",
+		"presentation": false
+	},
+	{
+		"id": "19.2",
+		"title": "Badet öppnar",
+		"topic": "Äventyrsbad: 10.00, Saunaworld: 11.00",
+		"time": "10:00",
 		"presentation": false
 	},
 	{
 		"id": "20",
 		"title": "Aktivitet",
-		"topic": "Skoter på renfjället",
+		"topic": "Skoter på renfjället, samling vid Camp Åre (se karta nedan)",
 		"time": "13:00",
 		"presentation": false
 	},
@@ -221,6 +235,13 @@ var sundaySchedule = [
 		"title": "Flyger från Frösön",
 		"topic": "  ",
 		"time": "12:20",
+		"presentation": false
+	},
+	{
+		"id": "26",
+		"title": "Landar i Göteborg",
+		"topic": "  ",
+		"time": "13:45",
 		"presentation": false
 	}
 ];
