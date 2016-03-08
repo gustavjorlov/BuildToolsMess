@@ -38,7 +38,7 @@ var fridaySchedule = [
 	{
 		"id": "5",
 		"title": "Sture",
-		"topic": "CAN bus reverse engineering",
+		"topic": "Vad vi gör på Autocom eller Det finns alltid lite plats för sök",
 		"description": "",
 		"duration": 30,
 		"time": "14:00",
@@ -48,7 +48,7 @@ var fridaySchedule = [
 	{
 		"id": "6",
 		"title": "Olof",
-		"topic": "Automatgenerera dina tester i Spring",
+		"topic": "Mocka med mikrotjänster",
 		"description": "",
 		"duration": 45,
 		"time": "14:30",
@@ -240,7 +240,63 @@ var schedule = [
 	}
 ];
 
+const mapMarkers = [{
+	coordinate: {
+		lat: 63.398378,
+		lon: 13.074887
+	},
+	name: "Holiday Club"
+}, {
+	coordinate: {
+		lat: 63.400389,
+		lon: 13.078316
+	},
+	name: "Åre Torg"
+}, {
+	coordinate: {
+		lat: 63.401009,
+		lon: 13.077261
+	},
+	name: "Café Torget Åre"
+}, {
+	coordinate: {
+		lat: 63.402402,
+		lon: 13.076804
+	},
+	name: "Liften"
+}, {
+	coordinate: {
+		lat: 63.402598,
+		lon: 13.076195
+	},
+	name: "Åre Kafferosteri"
+}, {
+	coordinate: {
+		lat: 63.399566,
+		lon: 13.078669
+	},
+	name: "Vinbaren"
+}, {
+	coordinate: {
+		lat: 63.39734,
+		lon: 13.07518
+	},
+	name: "Camp Åre Skotersafari"
+}, {
+	coordinate: {
+		lat: 63.429971,
+		lon: 13.015674
+	},
+	name: "Längdskidor - Ullådalen<br/><a target='tab' href='https://www.skistar.com/sv/Are/Event/Langdskidakning/' />Länk</a>"
+}, {
+	coordinate: {
+		lat: 63.397227,
+		lon: 13.072158
+	},
+	name: "Längdskidor - Åresjön<br/><a target='tab' href='http://www.arecrosscountry.com/app/destination/are' />Länk</a>"
+}];
+
 ReactDOM.render(
-	<Application schedule={schedule} />,
+	<Application mapMarkers={mapMarkers} schedule={schedule} />,
 	document.getElementById('main')
 );

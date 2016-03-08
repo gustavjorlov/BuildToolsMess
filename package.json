@@ -17,7 +17,7 @@
     "copy": "npm run copy:images && npm run copy:style && npm run copy:html",
     "watch:js": "watch 'npm run compile:dev' src",
     "browsersync": "browser-sync start --files dist_npm/bundle.js --server dist_npm",
-    "prebuild:dev": "rimraf dist_npm && kdir dist_npm",
+    "prebuild:dev": "rimraf dist_npm && mkdir dist_npm",
     "prebuild:prod": "rimraf dist_npm && mkdir dist_npm",
     "build:dev": "time(npm run compile:dev && npm run copy)",
     "build:prod": "time(npm run compile:prod && npm run copy)",
