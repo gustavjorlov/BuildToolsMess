@@ -27,34 +27,27 @@ gulp.task("js", function (){
 		.pipe(source("bundle.js"))
 		.pipe(buffer())
 		.pipe(uglify({'compress': true}))
-    	.pipe(gulp.dest("dist"));
+    	.pipe(gulp.dest("dist_gulp"));
 });
 
 gulp.task('lint', function(){
-	return gulp.src(['**/*.js','!node_modules/**','!dist/**'])
+	return gulp.src(['**/*.js','!node_modules/**','!dist_gulp/**'])
         .pipe(eslint()) // eslint() attaches the lint output to the "eslint" property of the file object so it can be used by other modules.
         .pipe(eslint.format()); // eslint.format() outputs the lint results to the console. Alternatively use eslint.formatEach() (see Docs).
-        //.pipe(eslint.failAfterError()); // To have the process exit with an error code (1) on lint error, return the stream and pipe to failAfterError last.
 });
 
 gulp.task('copy', function () {
 	var extensions = ['html', 'css', 'png', 'svg', 'jpg', 'eot', 'woff', 'woff2', 'ttf', 'otf'];
 	return gulp
 		.src(extensions.map(function(ext){ return './src/**/*.'+ext; }))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('dist_gulp'));
 });
-
-/*gulp.task("css", function(){
-	return gulp
-		.src(paths.css)
-		.pipe(gulp.dest('dist'));
-});*/
 
 gulp.task("clean", function(){
-	del(["dist"]);
+	del(["distdist_gulp"]);
 });
 
-gulp.task('serve', serve('dist'));
+gulp.task('serve', serve('dist_gulp'));
 
 gulp.task('watch', function() {
 	gulp.watch([paths.scripts, "src/**/*"], ['lint', 'js', 'copy']);

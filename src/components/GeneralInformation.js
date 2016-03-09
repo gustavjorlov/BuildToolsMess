@@ -8,6 +8,7 @@ export default class GeneralInformation extends React.Component{
 				<h2>Information</h2>
 				<div className="info">
 					<p>Samordna eventuell samåkning på Slack</p>
+					<p>Glöm ej passet</p>
 					<p>Incheckat bagage får väga 20 kg (ni som tar med skidfodral får ha två kollin men fortfarande sammanlagd vikt 20 kg, skidfodral är enda tillåtna extra-kollit). Handbagage får väga 8 kg.</p>
 					<p>Packa med badkläder och varma kläder samt donglar till projektor (vi kan inte ha med för många)</p>
 					<p>Lycklig vinnare av singelrummet är den som postar bästa/roligaste motiveringen till det på Slack</p>
