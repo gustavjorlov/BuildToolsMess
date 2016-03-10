@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "clean": "rimraf dist_demo/*",
     "lint": "eslint src/** --quiet",
     "precompile": "npm run lint",
