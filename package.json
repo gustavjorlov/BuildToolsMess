@@ -18,7 +18,7 @@
     "build": "npm run compile && npm run copy",
     "build:clean": "npm run clean && npm run build",
     "dev": "npm run browsersync & npm run watch:js",
-    "deploy": "npm run clean && npm run build && npm version patch && git push origin master && git push heroku master"
+    "deploy": "npm run clean && npm run build && npm version patch && git push origin master && git push heroku master && open https://kitscon.herokuapp.com"
   },
   "engines": {
     "node": "~4.2.1",
