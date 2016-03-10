@@ -30,7 +30,7 @@ module.exports = function(grunt){
             }
         }
     });
-    
+
     grunt.config('uglify', {
         scripts: {
             src: './dist_grunt/bundle.js',

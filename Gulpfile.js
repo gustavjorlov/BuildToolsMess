@@ -54,6 +54,6 @@ gulp.task('watch', function() {
 });
 
 //Collections
-gulp.task("default", ['lint', 'js', 'copy', 'serve']);
+gulp.task("default", ['lint', 'js', 'copy']);
 gulp.task("rebuild", ['clean', 'default']);
 gulp.task("dev", ['clean', 'lint', 'js', 'copy', 'watch', 'serve']);
